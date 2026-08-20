@@ -1,0 +1,26 @@
+name: Bug report
+description: Something in the report is wrong, ugly, or crashes
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the exact command you ran and what you expected instead.
+      placeholder: "repo-pulse . --days 90 → traceback / empty chart / wrong numbers"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versions
+      description: Output of `repo-pulse --version`, `python --version` and `git --version`.
+    validations:
+      required: true
+  - type: textarea
+    id: repo
+    attributes:
+      label: Repository shape
+      description: >
+        Roughly how big is the repo (commits, contributors, years)? Anything unusual —
+        submodules, rewritten history, non-UTF-8 paths, shallow clone?

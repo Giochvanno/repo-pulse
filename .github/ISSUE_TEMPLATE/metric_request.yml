@@ -1,0 +1,23 @@
+name: New metric
+description: Propose something repo-pulse should measure
+labels: [enhancement, metric]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What question would this answer?
+      description: Metrics earn their place by answering a question someone actually asks.
+      placeholder: "Which files change together, so I know what a PR is likely to break?"
+    validations:
+      required: true
+  - type: textarea
+    id: computation
+    attributes:
+      label: How would it be computed from `git log`?
+      description: repo-pulse has no runtime dependencies and no network access — it only has history.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where should it show up?
+      multiple: true
+      options: [Stat tile, New chart, Risk section, JSON only, Terminal summary]
